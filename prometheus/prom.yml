@@ -1,5 +1,6 @@
 global:
   scrape_interval: 15s # Default scrape interval
+  evaluation_interval: 15s
 
 scrape_configs:
   - job_name: 'prometheus'
@@ -10,6 +11,7 @@ scrape_configs:
     static_configs:
       - targets: ['api.d-eatfresh.benagos.com']
     metrics_path: '/api/v1/health/metrics'
+    scrape_interval: 10s
     scheme: 'https'
 
 
